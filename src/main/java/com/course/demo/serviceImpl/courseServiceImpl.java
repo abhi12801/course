@@ -32,9 +32,9 @@ public class courseServiceImpl implements courseService {
         courseRepo.save(courseEntity);
     }
 
-    @Override
-    public courseEntity getCourseById(int id) {
-        courseEntity courseEntity = courseRepo.findById(id);
-        return  courseEntity;
-    }
+//    @Override
+//    public courseEntity getCourseById(int id) {
+//        courseEntity courseEntity = courseRepo.findById(id);
+//        return  courseEntity;
+//    }
 }
