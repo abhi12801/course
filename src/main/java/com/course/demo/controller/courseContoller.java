@@ -6,10 +6,10 @@ import com.course.demo.entity.courseEntity;
 import com.course.demo.service.courseService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @Slf4j
@@ -26,16 +26,16 @@ public class courseContoller {
     }
 
     @GetMapping("/{id}")
-    public courseEntity getCourseById(@PathVariable int id ){
-        courseEntity courseEntity =courseService.getCourseById(id);
+    public Optional<courseEntity> getCourseById(@PathVariable int id ){
+        Optional<courseEntity> courseEntity =courseService.getCourseById(id);
         return courseEntity;
     }
 
-    @PostMapping("/create")
-    public  void createCourse(@RequestBody requestDto requestbody){
-        courseService.createCourse(requestbody);
-    }
-
+//    @PostMapping("/create")
+//    public  void createCourse(@RequestBody requestDto requestbody){
+//        courseService.createCourse(requestbody);
+//    }
+//
 
 
 

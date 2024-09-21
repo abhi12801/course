@@ -2,12 +2,9 @@ package com.course.demo.service;
 
 import com.course.demo.dto.requestDto;
 import com.course.demo.entity.courseEntity;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
-
-
-
+import java.util.Optional;
 
 
 public interface courseService {
@@ -16,6 +13,6 @@ public interface courseService {
 
     public void createCourse(requestDto dto );
 
-    public courseEntity getCourseById(int id);
+    public Optional<courseEntity> getCourseById(int id);
 
 }
