@@ -34,7 +34,7 @@ public class courseServiceImpl implements courseService {
 
     @Override
     public courseEntity getCourseById(int id) {
-           courseEntity courseEntity = courseRepo.findById(id);
+           courseEntity courseEntity = courseRepo.findById(id)   ;
         return  courseEntity;
     }
 }
